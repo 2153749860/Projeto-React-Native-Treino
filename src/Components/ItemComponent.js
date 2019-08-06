@@ -10,21 +10,34 @@ class Item extends Component {
   constructor() {
     super();
     this.state = {
+        text: "",
         itens: [
-          {key: '0', nome: 'Item 0'},
-          {key: '1', nome: 'Item 1'}
+          {key: '0', nome: 'Item 0', done: false},
+          {key: '1', nome: 'Item 1', done: false}
         ]
     }
   }
 
   renderItem(obj) {
     return (
-      <Text>{obj.item.nome}</Text>
+      <Text style={styles.item}>{obj.item.nome}</Text>
     );
   }
 
   inserirItem() {
+    if(this.state.text === ''){
+      return;
+    }
 
+    let newItem = {
+      key: this.state.itens.length.toString(),
+      nome: this.state.text,
+      done: false,
+    }
+
+    let items = this.state.items;
+    items.push(newItem);
+    this.setState(items); 
   }
 
   render() {
@@ -33,5 +46,12 @@ class Item extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  item: {
+    paddingLeft: 10,
+    fontSize: 15
+  }
+});
 
 export default Item;

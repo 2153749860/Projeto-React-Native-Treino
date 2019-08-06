@@ -7,7 +7,7 @@ const Page2 = () => (
   <View>
     <Text>Aqui poderá adicionar novos items!</Text>
     <Input/>
-    <Button/>
+    <Button title="Adicionar Item"/>
   </View>
 );
 

@@ -7,7 +7,7 @@ import Item from './Components/ItemComponent';
 const Page1 = ({ navigation }) => (
   <View style={styles.container}>
     <Image source={require('./Components/tiger-icon-png.png')} style={styles.imagem}/>
-    <Text>Home</Text>
+    <Text style={styles.titulo}>Home</Text>
     <Item />
     <Button title="Adicionar Item" onPress={()=>navigation.navigate('Adicionar')}/>
   </View>
@@ -15,6 +15,15 @@ const Page1 = ({ navigation }) => (
 
 Page1.navigationOptions = {
   title: 'Home',
+  headerStyle: {
+    backgroundColor: '#daa520',
+  },
+  headerTintColor: '#fff',
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 }
 
 const styles = StyleSheet.create({
@@ -26,6 +35,12 @@ const styles = StyleSheet.create({
     width: null,
     resizeMode: 'contain',
     height: 220
+  },
+  titulo: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: 20,
+    textAlign: 'center'
   }
 });
 
