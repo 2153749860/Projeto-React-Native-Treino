@@ -10,19 +10,22 @@ class Item extends Component {
   constructor() {
     super();
     this.state = {
+        text="",
         itens: [
           {key: '0', nome: 'Item 0'},
           {key: '1', nome: 'Item 1'}
         ]
     }
-
-
   }
 
   renderItem(obj) {
     return (
       <Text>{obj.item.nome}</Text>
     );
+  }
+
+  inserirItem() {
+
   }
 
   render() {
