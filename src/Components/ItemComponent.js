@@ -10,7 +10,6 @@ class Item extends Component {
   constructor() {
     super();
     this.state = {
-        text="",
         itens: [
           {key: '0', nome: 'Item 0'},
           {key: '1', nome: 'Item 1'}

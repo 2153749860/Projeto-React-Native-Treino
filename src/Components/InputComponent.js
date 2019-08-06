@@ -12,7 +12,7 @@ class Input extends Component {
   render() {
     return (
       <View style={styles.inputView}>
-        <TextInput style={styles.inputBox} value={Item.text} />
+        <TextInput style={styles.inputBox} />
         
       </View>
     );
